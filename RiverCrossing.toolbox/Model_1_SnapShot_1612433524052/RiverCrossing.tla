@@ -19,8 +19,8 @@ bankIsSafe (bank) ==
         \lnot("farmer" \in bank) \* farmer is NOT on the bank
         /\ \* *AND* either
         (
-            /\ \lnot("wolf" \in bank /\ "sheep" \in bank) \* either wolf AND sheep aren't on the bank
-            /\ \lnot("sheep" \in bank /\ "cabbage" \in bank) \* either sheep AND cabbage aren't on the bank
+            \/ \lnot("wolf" \in bank /\ "sheep" \in bank) \* either wolf AND sheep aren't on the bank
+            \/ \lnot("sheep" \in bank /\ "cabbage" \in bank) \* either sheep AND cabbage aren't on the bank
         )
     )
     
@@ -54,5 +54,5 @@ Next ==
 
 =============================================================================
 \* Modification History
-\* Last modified Thu Feb 04 10:17:05 GMT 2021 by jonmc
+\* Last modified Thu Feb 04 10:12:01 GMT 2021 by jonmc
 \* Created Thu Feb 04 09:11:44 GMT 2021 by jonmc

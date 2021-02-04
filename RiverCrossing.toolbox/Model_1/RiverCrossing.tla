@@ -16,11 +16,11 @@ bankIsSafe (bank) ==
     "farmer" \in bank \* this bank is safe -- farmer is on it -- no need to check rest
     \/
     (
-        ~("farmer" \in bank) \* farmer is NOT on the bank
+        \lnot("farmer" \in bank) \* farmer is NOT on the bank
         /\ \* *AND* either
         (
-            \/ ~("wolf" \in bank /\ "sheep" \in bank) \* either wolf AND sheep aren't on the bank
-            \/ ~("sheep" \in bank /\ "cabbage" \in bank) \* either sheep AND cabbage aren't on the bank
+            /\ \lnot("wolf" \in bank /\ "sheep" \in bank) \* either wolf AND sheep aren't on the bank
+            /\ \lnot("sheep" \in bank /\ "cabbage" \in bank) \* either sheep AND cabbage aren't on the bank
         )
     )
     
@@ -33,6 +33,13 @@ Move (fromBank, toBank, thing) ==
     /\ thing \in fromBank \* ensure the thing is on the bank we're going from
     /\ fromBank' = fromBank \ {"farmer", thing} \* remove farmer and thing from fromBank
     /\ toBank' = toBank \cup {"farmer", thing} \* toBank is now union of old toBank and {"farmer", thing} set's
+    /\ bankIsSafe(fromBank')
+    
+MoveEmpty (fromBank, toBank) == 
+    /\ "farmer" \in fromBank
+    /\ fromBank' = fromBank \ {"farmer"} \* remove farmer and thing from fromBank
+    /\ toBank' = toBank \cup {"farmer"} \* toBank is now union of old toBank and {"farmer"} set's
+    /\ bankIsSafe(fromBank')
     
 Next == 
     \/ Move (bank1, bank2, "wolf")
@@ -41,9 +48,11 @@ Next ==
     \/ Move (bank2, bank1, "wolf")
     \/ Move (bank2, bank1, "sheep")
     \/ Move (bank2, bank1, "cabbage")
+    \/ MoveEmpty(bank1, bank2)
+    \/ MoveEmpty(bank2, bank1)
 
 
 =============================================================================
 \* Modification History
-\* Last modified Thu Feb 04 09:48:43 GMT 2021 by jonmc
+\* Last modified Thu Feb 04 10:17:05 GMT 2021 by jonmc
 \* Created Thu Feb 04 09:11:44 GMT 2021 by jonmc

@@ -2,13 +2,13 @@
 TLC2 Version 2.16 of 31 December 2020 (rev: cdddf55)
 @!@!@ENDMSG 2262 @!@!@
 @!@!@STARTMSG 2187:0 @!@!@
-Running breadth-first search Model-Checking with fp 106 and seed -3631305487792614268 with 8 workers on 16 cores with 1207MB heap and 2714MB offheap memory [pid: 11692] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
+Running breadth-first search Model-Checking with fp 4 and seed -4869697745507222712 with 8 workers on 16 cores with 1207MB heap and 2714MB offheap memory [pid: 7824] (Windows 10 10.0 amd64, AdoptOpenJDK 14.0.1 x86_64, OffHeapDiskFPSet, DiskStateQueue).
 @!@!@ENDMSG 2187 @!@!@
 @!@!@STARTMSG 2220:0 @!@!@
 Starting SANY...
 @!@!@ENDMSG 2220 @!@!@
-Parsing file C:\Users\jonmc\Google Drive\University\Year 4 2020-21\KF6009 - Model Based Design and Verification\Labs\Lab Work\RiverCrossing.toolbox\Model_1\MC.tla
-Parsing file C:\Users\jonmc\Google Drive\University\Year 4 2020-21\KF6009 - Model Based Design and Verification\Labs\Lab Work\RiverCrossing.toolbox\Model_1\RiverCrossing.tla
+Parsing file C:\Users\jonmc\Google Drive\University\Year 4 2020-21\KF6009 - Model Based Design and Verification\Labs\Lab Work\KF6009\RiverCrossing.toolbox\Model_1\MC.tla
+Parsing file C:\Users\jonmc\Google Drive\University\Year 4 2020-21\KF6009 - Model Based Design and Verification\Labs\Lab Work\KF6009\RiverCrossing.toolbox\Model_1\RiverCrossing.tla
 Parsing file C:\Program Files\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\TLC.tla
 Parsing file C:\Program Files\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Naturals.tla
 Parsing file C:\Program Files\toolbox\plugins\org.lamport.tlatools_1.0.0.202012311918\tla2sany\StandardModules\Sequences.tla
@@ -23,281 +23,782 @@ Semantic processing of module MC
 SANY finished.
 @!@!@ENDMSG 2219 @!@!@
 @!@!@STARTMSG 2185:0 @!@!@
-Starting... (2021-02-04 09:52:31)
+Starting... (2021-02-04 10:17:06)
 @!@!@ENDMSG 2185 @!@!@
 @!@!@STARTMSG 2189:0 @!@!@
 Computing initial states...
 @!@!@ENDMSG 2189 @!@!@
 @!@!@STARTMSG 2190:0 @!@!@
-Finished computing initial states: 1 distinct state generated at 2021-02-04 09:52:31.
+Finished computing initial states: 1 distinct state generated at 2021-02-04 10:17:06.
 @!@!@ENDMSG 2190 @!@!@
-@!@!@STARTMSG 2193:0 @!@!@
-Model checking completed. No error has been found.
-  Estimates of the probability that TLC did not check all reachable states
-  because two distinct states had the same fingerprint:
-  calculated (optimistic):  val = 6.5E-19
-@!@!@ENDMSG 2193 @!@!@
+@!@!@STARTMSG 2110:1 @!@!@
+Invariant inv_161243382573514000 is violated.
+@!@!@ENDMSG 2110 @!@!@
+@!@!@STARTMSG 2121:1 @!@!@
+The behavior up to this point is:
+@!@!@ENDMSG 2121 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+1: <Initial predicate>
+/\ bank1 = {"farmer", "wolf", "sheep", "cabbage"}
+/\ bank2 = {}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+2: <Move line 46, col 8 to line 46, col 35 of module RiverCrossing>
+/\ bank1 = {"wolf", "cabbage"}
+/\ bank2 = {"farmer", "sheep"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+3: <MoveEmpty line 52, col 8 to line 52, col 30 of module RiverCrossing>
+/\ bank1 = {"farmer", "wolf", "cabbage"}
+/\ bank2 = {"sheep"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+4: <Move line 47, col 8 to line 47, col 37 of module RiverCrossing>
+/\ bank1 = {"wolf"}
+/\ bank2 = {"farmer", "sheep", "cabbage"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+5: <Move line 49, col 8 to line 49, col 35 of module RiverCrossing>
+/\ bank1 = {"farmer", "wolf", "sheep"}
+/\ bank2 = {"cabbage"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+6: <Move line 45, col 8 to line 45, col 34 of module RiverCrossing>
+/\ bank1 = {"sheep"}
+/\ bank2 = {"farmer", "wolf", "cabbage"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+7: <MoveEmpty line 52, col 8 to line 52, col 30 of module RiverCrossing>
+/\ bank1 = {"farmer", "sheep"}
+/\ bank2 = {"wolf", "cabbage"}
+
+@!@!@ENDMSG 2217 @!@!@
+@!@!@STARTMSG 2217:4 @!@!@
+8: <Move line 46, col 8 to line 46, col 35 of module RiverCrossing>
+/\ bank1 = {}
+/\ bank2 = {"farmer", "wolf", "sheep", "cabbage"}
+
+@!@!@ENDMSG 2217 @!@!@
 @!@!@STARTMSG 2201:0 @!@!@
-The coverage statistics at 2021-02-04 09:52:31
+The coverage statistics at 2021-02-04 10:17:06
 @!@!@ENDMSG 2201 @!@!@
 @!@!@STARTMSG 2773:0 @!@!@
-<Init line 11, col 1 to line 11, col 4 of module RiverCrossing>: 1:1
+<Init line 11, col 1 to line 11, col 4 of module RiverCrossing>: 2:2
 @!@!@ENDMSG 2773 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 12, col 5 to line 13, col 17 of module RiverCrossing: 1
+  line 12, col 5 to line 13, col 17 of module RiverCrossing: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (38 8 38 34)>: 1:1
+<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (45 8 45 34)>: 2:4
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 28 of module RiverCrossing: 5
+  line 32, col 8 to line 32, col 28 of module RiverCrossing: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 4
+  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 8 to line 33, col 25 of module RiverCrossing: 2
+  line 33, col 8 to line 33, col 25 of module RiverCrossing: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 1
+  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 9
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 1
+  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 9
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 8 to line 34, col 47 of module RiverCrossing: 1
+  line 34, col 8 to line 34, col 47 of module RiverCrossing: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 35, col 8 to line 35, col 46 of module RiverCrossing: 1
+  |line 34, col 20 to line 34, col 47 of module RiverCrossing: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 38, col 14 to line 38, col 18 of module RiverCrossing: 4
+  line 35, col 8 to line 35, col 46 of module RiverCrossing: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 38, col 21 to line 38, col 25 of module RiverCrossing: 1
+  |line 35, col 18 to line 35, col 46 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 8 to line 36, col 28 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 19 to line 36, col 27 of module RiverCrossing: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 14 to line 45, col 18 of module RiverCrossing: 44
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 45, col 21 to line 45, col 25 of module RiverCrossing: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (39 8 39 35)>: 1:1
+<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (46 8 46 35)>: 2:6
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 28 of module RiverCrossing: 5
+  line 32, col 8 to line 32, col 28 of module RiverCrossing: 20
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 4
+  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 15
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 8 to line 33, col 25 of module RiverCrossing: 2
+  line 33, col 8 to line 33, col 25 of module RiverCrossing: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 1
+  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 1
+  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 8 to line 34, col 47 of module RiverCrossing: 1
+  line 34, col 8 to line 34, col 47 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 35, col 8 to line 35, col 46 of module RiverCrossing: 1
+  |line 34, col 20 to line 34, col 47 of module RiverCrossing: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 39, col 14 to line 39, col 18 of module RiverCrossing: 4
+  line 35, col 8 to line 35, col 46 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 39, col 21 to line 39, col 25 of module RiverCrossing: 1
+  |line 35, col 18 to line 35, col 46 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 8 to line 36, col 28 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 19 to line 36, col 27 of module RiverCrossing: 27
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 14 to line 46, col 18 of module RiverCrossing: 42
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 46, col 21 to line 46, col 25 of module RiverCrossing: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (40 8 40 37)>: 1:1
+<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (47 8 47 37)>: 1:3
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 28 of module RiverCrossing: 5
+  line 32, col 8 to line 32, col 28 of module RiverCrossing: 15
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 4
+  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 8 to line 33, col 25 of module RiverCrossing: 2
+  line 33, col 8 to line 33, col 25 of module RiverCrossing: 8
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 1
+  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 1
+  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 8 to line 34, col 47 of module RiverCrossing: 1
+  line 34, col 8 to line 34, col 47 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 35, col 8 to line 35, col 46 of module RiverCrossing: 1
+  |line 34, col 20 to line 34, col 47 of module RiverCrossing: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 40, col 14 to line 40, col 18 of module RiverCrossing: 4
+  line 35, col 8 to line 35, col 46 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 40, col 21 to line 40, col 25 of module RiverCrossing: 1
+  |line 35, col 18 to line 35, col 46 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 36, col 8 to line 36, col 28 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 19 to line 36, col 27 of module RiverCrossing: 19
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 14 to line 47, col 18 of module RiverCrossing: 31
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 47, col 21 to line 47, col 25 of module RiverCrossing: 4
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (41 8 41 34)>: 0:1
+<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (48 8 48 34)>: 0:3
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 28 of module RiverCrossing: 5
+  line 32, col 8 to line 32, col 28 of module RiverCrossing: 14
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 4
+  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 11
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 8 to line 33, col 25 of module RiverCrossing: 4
+  line 33, col 8 to line 33, col 25 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 3
+  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 7
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 3
+  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 7
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 8 to line 34, col 47 of module RiverCrossing: 1
+  line 34, col 8 to line 34, col 47 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 35, col 8 to line 35, col 46 of module RiverCrossing: 1
+  line 35, col 8 to line 35, col 46 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 14 to line 41, col 18 of module RiverCrossing: 4
+  line 36, col 8 to line 36, col 28 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 41, col 21 to line 41, col 25 of module RiverCrossing: 1
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 19 to line 36, col 27 of module RiverCrossing: 13
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 14 to line 48, col 18 of module RiverCrossing: 24
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 48, col 21 to line 48, col 25 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (42 8 42 35)>: 0:1
+<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (49 8 49 35)>: 2:5
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 28 of module RiverCrossing: 5
+  line 32, col 8 to line 32, col 28 of module RiverCrossing: 16
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 4
+  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 11
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 8 to line 33, col 25 of module RiverCrossing: 4
+  line 33, col 8 to line 33, col 25 of module RiverCrossing: 12
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 3
+  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 7
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 3
+  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 7
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 8 to line 34, col 47 of module RiverCrossing: 1
+  line 34, col 8 to line 34, col 47 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 35, col 8 to line 35, col 46 of module RiverCrossing: 1
+  line 35, col 8 to line 35, col 46 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 14 to line 42, col 18 of module RiverCrossing: 4
+  line 36, col 8 to line 36, col 28 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 42, col 21 to line 42, col 25 of module RiverCrossing: 1
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 19 to line 36, col 27 of module RiverCrossing: 21
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 14 to line 49, col 18 of module RiverCrossing: 32
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 49, col 21 to line 49, col 25 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2772:0 @!@!@
-<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (43 8 43 37)>: 0:1
+<Move line 31, col 1 to line 31, col 30 of module RiverCrossing (50 8 50 37)>: 0:3
 @!@!@ENDMSG 2772 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 32, col 8 to line 32, col 28 of module RiverCrossing: 5
+  line 32, col 8 to line 32, col 28 of module RiverCrossing: 13
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 4
+  |line 32, col 21 to line 32, col 28 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 33, col 8 to line 33, col 25 of module RiverCrossing: 4
+  line 33, col 8 to line 33, col 25 of module RiverCrossing: 9
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 3
+  |line 33, col 8 to line 33, col 12 of module RiverCrossing: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 3
+  |line 33, col 18 to line 33, col 25 of module RiverCrossing: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 34, col 8 to line 34, col 47 of module RiverCrossing: 1
+  line 34, col 8 to line 34, col 47 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 35, col 8 to line 35, col 46 of module RiverCrossing: 1
+  line 35, col 8 to line 35, col 46 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 14 to line 43, col 18 of module RiverCrossing: 4
+  line 36, col 8 to line 36, col 28 of module RiverCrossing: 3
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 43, col 21 to line 43, col 25 of module RiverCrossing: 1
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 36, col 19 to line 36, col 27 of module RiverCrossing: 15
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 14 to line 50, col 18 of module RiverCrossing: 25
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 50, col 21 to line 50, col 25 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MoveEmpty line 38, col 1 to line 38, col 28 of module RiverCrossing (51 8 51 30)>: 0:1
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 8 to line 39, col 28 of module RiverCrossing: 11
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 39, col 21 to line 39, col 28 of module RiverCrossing: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 8 to line 40, col 40 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 40, col 20 to line 40, col 40 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 8 to line 41, col 39 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 41, col 18 to line 41, col 39 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 8 to line 42, col 28 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 42, col 19 to line 42, col 27 of module RiverCrossing: 18
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 18 to line 51, col 22 of module RiverCrossing: 28
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 51, col 25 to line 51, col 29 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2772:0 @!@!@
+<MoveEmpty line 38, col 1 to line 38, col 28 of module RiverCrossing (52 8 52 30)>: 2:4
+@!@!@ENDMSG 2772 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 39, col 8 to line 39, col 28 of module RiverCrossing: 14
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 39, col 21 to line 39, col 28 of module RiverCrossing: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 40, col 8 to line 40, col 40 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 40, col 20 to line 40, col 40 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 41, col 8 to line 41, col 39 of module RiverCrossing: 4
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 41, col 18 to line 41, col 39 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 42, col 8 to line 42, col 28 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 16, col 5 to line 25, col 5 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 16, col 5 to line 16, col 21 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 19, col 9 to line 24, col 9 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 19, col 32 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 22, col 13 to line 23, col 60 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 6
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 3
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 42, col 19 to line 42, col 27 of module RiverCrossing: 29
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 18 to line 52, col 22 of module RiverCrossing: 39
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 52, col 25 to line 52, col 29 of module RiverCrossing: 6
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2774:0 @!@!@
 <TypeInv line 27, col 1 to line 27, col 7 of module RiverCrossing>
 @!@!@ENDMSG 2774 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  line 27, col 12 to line 27, col 51 of module RiverCrossing: 4
+  line 27, col 12 to line 27, col 51 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 27, col 12 to line 27, col 29 of module RiverCrossing: 4
+  |line 27, col 12 to line 27, col 29 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 16, col 5 to line 25, col 5 of module RiverCrossing: 4
+  ||line 16, col 5 to line 25, col 5 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 16, col 5 to line 16, col 21 of module RiverCrossing: 4
+  |||line 16, col 5 to line 16, col 21 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 19, col 9 to line 24, col 9 of module RiverCrossing: 3
+  |||line 19, col 9 to line 24, col 9 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 19, col 9 to line 19, col 28 of module RiverCrossing: 3
+  ||||line 19, col 9 to line 19, col 32 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||line 22, col 13 to line 23, col 56 of module RiverCrossing: 3
+  ||||line 22, col 13 to line 23, col 60 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 22, col 16 to line 22, col 53 of module RiverCrossing: 3
+  |||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||||||line 22, col 18 to line 22, col 52 of module RiverCrossing: 3
+  ||||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 22, col 18 to line 22, col 32 of module RiverCrossing: 3
+  |||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||||line 22, col 37 to line 22, col 52 of module RiverCrossing: 2
+  |||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 2
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||||line 23, col 16 to line 23, col 56 of module RiverCrossing: 1
+  |||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 27, col 24 to line 27, col 28 of module RiverCrossing: 4
+  ||||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |line 27, col 34 to line 27, col 51 of module RiverCrossing: 4
+  |||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 5
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 16, col 5 to line 25, col 5 of module RiverCrossing: 4
+  |||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 16, col 5 to line 16, col 21 of module RiverCrossing: 4
+  ||line 27, col 24 to line 27, col 28 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  |||line 19, col 9 to line 24, col 9 of module RiverCrossing: 1
+  |line 27, col 34 to line 27, col 51 of module RiverCrossing: 10
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2221:0 @!@!@
-  ||line 27, col 46 to line 27, col 50 of module RiverCrossing: 4
+  ||line 16, col 5 to line 25, col 5 of module RiverCrossing: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 16, col 5 to line 16, col 21 of module RiverCrossing: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 19, col 9 to line 24, col 9 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 19, col 9 to line 19, col 32 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||line 22, col 13 to line 23, col 60 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 22, col 16 to line 22, col 57 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 22, col 22 to line 22, col 56 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 22, col 22 to line 22, col 36 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 22, col 41 to line 22, col 56 of module RiverCrossing: 2
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||line 23, col 16 to line 23, col 60 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||||||line 23, col 22 to line 23, col 59 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 23, col 22 to line 23, col 37 of module RiverCrossing: 5
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||||||line 23, col 42 to line 23, col 59 of module RiverCrossing: 1
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 27, col 46 to line 27, col 50 of module RiverCrossing: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2774:0 @!@!@
+<inv_161243382573514000 line 5, col 1 to line 5, col 22 of module MC>
+@!@!@ENDMSG 2774 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  line 6, col 1 to line 6, col 14 of module MC: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |line 6, col 7 to line 6, col 14 of module MC: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  ||line 29, col 13 to line 29, col 72 of module RiverCrossing: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 29, col 13 to line 29, col 22 of module RiverCrossing: 10
+@!@!@ENDMSG 2221 @!@!@
+@!@!@STARTMSG 2221:0 @!@!@
+  |||line 29, col 27 to line 29, col 72 of module RiverCrossing: 1
 @!@!@ENDMSG 2221 @!@!@
 @!@!@STARTMSG 2202:0 @!@!@
 End of statistics.
 @!@!@ENDMSG 2202 @!@!@
 @!@!@STARTMSG 2200:0 @!@!@
-Progress(2) at 2021-02-04 09:52:31: 7 states generated (455 s/min), 4 distinct states found (260 ds/min), 0 states left on queue.
+Progress(8) at 2021-02-04 10:17:06: 19 states generated (1,090 s/min), 10 distinct states found (574 ds/min), 0 states left on queue.
 @!@!@ENDMSG 2200 @!@!@
 @!@!@STARTMSG 2199:0 @!@!@
-7 states generated, 4 distinct states found, 0 states left on queue.
+19 states generated, 10 distinct states found, 0 states left on queue.
 @!@!@ENDMSG 2199 @!@!@
 @!@!@STARTMSG 2194:0 @!@!@
-The depth of the complete state graph search is 2.
+The depth of the complete state graph search is 8.
 @!@!@ENDMSG 2194 @!@!@
 @!@!@STARTMSG 2268:0 @!@!@
-The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 3 and the 95th percentile is 3).
+The average outdegree of the complete state graph is 1 (minimum is 0, the maximum 2 and the 95th percentile is 2).
 @!@!@ENDMSG 2268 @!@!@
 @!@!@STARTMSG 2186:0 @!@!@
-Finished in 928ms at (2021-02-04 09:52:31)
+Finished in 1052ms at (2021-02-04 10:17:06)
 @!@!@ENDMSG 2186 @!@!@
